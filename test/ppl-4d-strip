@@ -1,0 +1,43 @@
+space_dim 4
+-ZE -EM  +CM +GM  +CS +GS  -CP -GP  -SC +SG
+con_sys (up-to-date)
+topology NOT_NECESSARILY_CLOSED
+8 x 6 (sorted)
+index_first_pending 8
+0 -1 1 0 0 0 >=
+10 0 0 0 -1 0 >=
+1 0 0 0 0 -1 >
+0 0 0 0 0 1 >=
+0 0 0 0 1 0 >=
+0 0 0 1 0 0 >=
+1 1 -1 0 0 0 >=
+0 1 0 0 0 0 >=
+
+gen_sys (up-to-date)
+topology NOT_NECESSARILY_CLOSED
+10 x 6 (not_sorted)
+index_first_pending 10
+0 1 1 0 0 0 R
+0 0 0 1 0 0 R
+1 0 0 0 0 0 C
+1 0 0 0 10 0 C
+1 0 0 0 10 1 P
+1 0 0 0 0 1 P
+1 0 1 0 0 1 P
+1 0 1 0 0 0 C
+1 0 1 0 10 0 C
+1 0 1 0 10 1 P
+
+sat_c
+0 x 0
+
+sat_g
+8 x 10
+0 0 0 0 0 0 1 1 1 1
+0 0 1 0 0 1 1 1 0 0
+0 0 1 1 0 0 0 1 1 0
+0 0 0 0 1 1 1 0 0 1
+0 0 0 1 1 0 0 0 1 1
+0 1 0 0 0 0 0 0 0 0
+0 0 1 1 1 1 0 0 0 0
+1 0 0 0 0 0 0 0 0 0

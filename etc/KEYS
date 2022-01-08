@@ -1,0 +1,63 @@
+Key Bindings
+
+C-x means control pressed in conjunction with 'x', M-x means Meta
+(Alt) pressed in conjunction with 'x'.
+
+C-   set_mark 	 			 	 (that's control-space)
+C-a  bol						 (beginning of line)
+C-b  backward_char
+C-d  clip_char
+C-e  eol						 (end of line)
+C-f  forward_char
+Tab  insert_last_input_char
+C-k  clip_line
+C-l  center_window
+CR   insert_newline
+C-n  forward_line
+C-p  backward_line
+C-t  transpose_chars
+C-v  forward_window_page
+C-w  clip_region
+C-y  yank
+DEL  clip_char_back
+NL   insert_last_input_char
+
+BACKSPACE	clip_char_back
+PAGE UP 	forward_window_page
+PAGE DOWN	backward_window_page
+HOME  		bob					 (beginning of buffer)
+END  		eob 				 (end of buffer)
+UP  		backward_line
+DOWN  		forward_line
+LEFT  		backward_char
+RIGHT  		forward_char
+
+C-x C-c  return_break			 (quits the program)
+C-x e	 evaluate_file
+C-x C-e  evaluate_region
+C-x C-s  write_buffer
+C-x C-t  transpose_lines
+C-x C-x  swap_positions
+
+M-b  backward_word
+M-d  clip_word
+M-f  forward_word
+M-v  backward_window_page
+M-w  copy_region
+M-<  bob
+M->  eob
+
+
+C-c is usually reserved for user binding.  If the CERN directive is
+defined C-c is used for the CERN library demo.
+
+C-c r  random_fill
+C-c g  graph_pairs
+
+And for GMP integer expression evaluation.
+
+C-c i  eval_mpi_expr
+
+And for PPL polyhedron description.
+
+C-c p  ppl_buffer

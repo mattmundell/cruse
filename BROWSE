@@ -1,0 +1,543 @@
+[ebrowse-hs "ebrowse 5.0" " -x" () ()][ebrowse-ts [ebrowse-cs "T" () 0() () 0() ]
+()()
+()
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "BasicSimple" () 0"include/Simple.h" "class BasicSimple
+{" 175"include/Simple.h" ]
+()([ebrowse-ms "val" () 0 () "  int val;" 194 0  () () 0]
+)
+([ebrowse-ms "BasicSimple" () 0 () "  BasicSimple () :" 212 0  () "  BasicSimple () :" 212]
+)
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "Editor" () 0"include/Editor.h" "class Editor
+{" 752"include/Editor.h" ]
+([ebrowse-ts [ebrowse-cs "GTKEditor" () 0"include/GTKEditor.h" "class GTKEditor :" 186"include/GTKEditor.h" ]
+()()
+([ebrowse-ms "GTKEditor" () 0 () "  GTKEditor ()
+  {" 345 0  () "  GTKEditor ()
+  {" 345]
+[ebrowse-ms "clear" () 0 () "  void clear ()" 582 0  () "  void clear ()" 582]
+[ebrowse-ms "display" () 1 () "  void display ()" 252 1  () "  void display ()" 252]
+[ebrowse-ms "run" () 1 () "  int run (std" 502 0  () "  int run (std" 502]
+[ebrowse-ms "~GTKEditor" () 1 () "  virtual ~GTKEditor ()" 420 0  () "  virtual ~GTKEditor ()" 420]
+)
+([ebrowse-ms "initial_cursor_state" () 0 () "  static int initial_cursor_state;" 329 0  () () 0]
+)
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "PythonedEditor" () 0"include/PythonedEditor.h" "class PythonedEditor :" 217"src/PythonedEditor.cc" ]
+([ebrowse-ts [ebrowse-cs "CursedEditor" () 0"include/CursedEditor.h" "class CursedEditor :" 224"include/CursedEditor.h" ]
+([ebrowse-ts [ebrowse-cs "Cruse" () 0"include/Cruse.h" "class Cruse :" 233"include/Cruse.h" ]
+()()
+([ebrowse-ms "Cruse" () 0 () "  Cruse (int argc, char **argv)
+	:" 304 0  () "  Cruse (int argc, char **argv)
+	:" 304]
+[ebrowse-ms "print_version" () 0 () "  print_version (string" 1221 0  () "  print_version (string" 1221]
+[ebrowse-ms "set_scroll_margin" () 0 () "  set_scroll_margin (string" 1496 0  () "  set_scroll_margin (string" 1496]
+[ebrowse-ms "set_tab_width" () 0 () "  set_tab_width (string" 1676 0  () "  set_tab_width (string" 1676]
+[ebrowse-ms "start" () 1 () "  int start ()" 995 0  () "  int start ()" 995]
+[ebrowse-ms "~Cruse" () 1 () "  virtual ~Cruse ()" 925 0  () "  virtual ~Cruse ()" 925]
+)
+()
+()
+()
+()
+()()
+])()
+([ebrowse-ms "CursedEditor" () 0 () "  CursedEditor (int argc, char **argv)
+	:" 485 0  () "  CursedEditor (int argc, char **argv)
+	:" 485]
+[ebrowse-ms "CursedEditor" () 0 () "  CursedEditor () {" 462 0  () "  CursedEditor () {" 462]
+[ebrowse-ms "clear_display" () 0 () "  void clear_display ()" 679 0  "src/CursedEditor.cc" "CursedEditor::clear_display ()" 5697]
+[ebrowse-ms "display" () 0 () "  bool display (bool" 390 1  "src/CursedEditor.cc" "CursedEditor::display (bool" 2359]
+[ebrowse-ms "read_char" () 0 () "  bool read_char (int" 813 0  () "  bool read_char (int" 813]
+[ebrowse-ms "run" () 0 () "  int run (string" 642 0  "src/CursedEditor.cc" "CursedEditor::run (string" 538]
+[ebrowse-ms "~CursedEditor" () 0 () "  ~CursedEditor ()" 557 0  () "  ~CursedEditor ()" 557]
+)
+([ebrowse-ms "initial_cursor_state" () 0 () "  static int initial_cursor_state;" 443 0  "src/CursedEditor.cc" "int CursedEditor::initial_cursor_state = 0;" 368]
+[ebrowse-ms "version_string" () 0 () "  static string version_string;" 290 2  "src/CursedEditor.cc" "rsion_string = \"CursedEditor \" xstr (VERSION);" 324]
+)
+([ebrowse-ms "version" () 0 () "  static string version ()" 915 0  "src/CursedEditor.cc" "CursedEditor::version ()" 5746]
+)
+()
+()
+()()
+])([ebrowse-ms "_args" () 0 () "  std::pair<int,char**> _args;" 275 1  () () 0]
+)
+([ebrowse-ms "PythonedEditor" () 0 () "  PythonedEditor (int argc, char** argv);" 357 0  () "Editor::PythonedEditor (int argc, char** argv)
+{" 499]
+[ebrowse-ms "PythonedEditor" () 0 () "  PythonedEditor ();" 334 0  () "PythonedEditor::PythonedEditor ()
+{" 414]
+[ebrowse-ms "bind_key" () 1 () "  virtual void* bind_key (int" 1038 0  () "PythonedEditor::bind_key (int" 6408]
+[ebrowse-ms "bind_key_in_map" () 1 () "  virtual void* bind_key_in_map (int" 1197 0  () "PythonedEditor::bind_key_in_map (int" 5935]
+[ebrowse-ms "eval_file" () 1 () "  int eval_file ()" 612 0  () "PythonedEditor::eval_file ()" 1617]
+[ebrowse-ms "eval_region" () 1 () "  int eval_region ()" 698 0  () "PythonedEditor::eval_region ()" 3040]
+[ebrowse-ms "export_this" () 0 () "  string export_this ()" 928 0  () "PythonedEditor::export_this ()" 4393]
+[ebrowse-ms "init_python" () 0 () "  int init_python ()" 525 0  () "PythonedEditor::init_python ()" 718]
+[ebrowse-ms "~PythonedEditor" () 1 () "  virtual ~PythonedEditor ()" 406 0  () "PythonedEditor::~PythonedEditor ()" 635]
+)
+()
+()
+()
+()
+()()
+])([ebrowse-ms "append_next_clip" () 0 () "  bool append_next_clip;" 1499 0  () () 0]
+[ebrowse-ms "buffer" () 0 () "  buffer::Buffer *buffer;" 1035 0  () () 0]
+[ebrowse-ms "buffers" () 0 () "  vector<buffer::Buffer> buffers;" 941 0  () () 0]
+[ebrowse-ms "clip" () 0 () "  cons::ConsT<cons::Cons> *clip;" 1293 0  () () 0]
+[ebrowse-ms "clips" () 0 () "  cons::ConsT<cons::Cons> *clips;" 1228 0  () () 0]
+[ebrowse-ms "echo" () 0 () "  string echo;" 2573 0  () () 0]
+[ebrowse-ms "input_buffer" () 0 () "  int input_buffer[INPUT_BUFFER_SIZE];" 877 0  () () 0]
+[ebrowse-ms "key_bindings" () 0 () "  key_map *key_bindings;" 1636 0  () () 0]
+[ebrowse-ms "old_append_next_clip" () 0 () "  bool old_append_next_clip;" 1528 0  () () 0]
+[ebrowse-ms "scroll_margin" () 0 () "  int scroll_margin;" 2871 0  () () 0]
+[ebrowse-ms "tab_width" () 0 () "  int tab_width;" 2591 0  () () 0]
+[ebrowse-ms "window" () 0 () "  SupplyWindow *window;" 1172 0  () () 0]
+[ebrowse-ms "windows" () 0 () "  vector<SupplyWindow> windows;" 1088 0  () () 0]
+[ebrowse-ms "wrap_indicator" () 0 () "  char wrap_indicator;" 2951 0  () () 0]
+)
+([ebrowse-ms "Editor" () 0 () "  Editor ();" 2964 0  "src/Editor.cc" "Editor::Editor ()
+{" 866]
+[ebrowse-ms "add_clip" () 0 () "  void add_clip (cons" 1385 0  "src/Editor.cc" "Editor::add_clip (Cons" 9102]
+[ebrowse-ms "bind_key" () 9 () "  virtual void* bind_key (int" 3713 0  "src/Editor.cc" "Editor::bind_key (int" 2839]
+[ebrowse-ms "bind_key" () 1 () "  virtual void* bind_key (int" 3506 0  "src/Editor.cc" "Editor::bind_key (int" 2737]
+[ebrowse-ms "bind_key_in_map" () 1 () "  virtual void* bind_key_in_map (int" 4189 0  "src/Editor.cc" "Editor::bind_key_in_map (int" 3300]
+[ebrowse-ms "bind_key_in_map" () 1 () "  virtual void* bind_key_in_map (int" 3933 0  "src/Editor.cc" "Editor::bind_key_in_map (int" 3178]
+[ebrowse-ms "bind_key_to_map" () 1 () "  virtual int bind_key_to_map (int" 4406 0  "src/Editor.cc" "Editor::bind_key_to_map (int" 3779]
+[ebrowse-ms "bind_key_to_map_in_map" () 1 () "  virtual int bind_key_to_map_in_map (int" 4606 0  "src/Editor.cc" "Editor::bind_key_to_map_in_map (int" 3903]
+[ebrowse-ms "bind_sequence" () 1 () "  virtual int bind_sequence (char" 4975 0  "src/Editor.cc" "Editor::bind_sequence (char" 1614]
+[ebrowse-ms "bind_sequence" () 1 () "  virtual int bind_sequence (char" 4797 0  "src/Editor.cc" "Editor::bind_sequence (char" 1507]
+[ebrowse-ms "clear_display" () 9 () "  virtual void clear_display ()" 1980 0  () () 0]
+[ebrowse-ms "display" () 9 () "  virtual bool display (bool" 1845 0  () () 0]
+[ebrowse-ms "display" () 1 () "  virtual bool display ()" 1729 0  () "  virtual bool display ()" 1729]
+[ebrowse-ms "display_loop" () 0 () "  int display_loop ()" 1946 0  "src/Editor.cc" "Editor::display_loop ()" 8375]
+[ebrowse-ms "eval_file" () 1 () "  virtual int eval_file ()" 2184 0  () "  virtual int eval_file ()" 2184]
+[ebrowse-ms "eval_mpi_line" () 0 () "  void eval_mpi_line ()" 5216 0  "src/Editor.cc" "Editor::eval_mpi_line ()" 10420]
+[ebrowse-ms "eval_region" () 1 () "  virtual int eval_region ()" 2283 0  () "  virtual int eval_region ()" 2283]
+[ebrowse-ms "graph_float_pairs" () 0 () "  void graph_float_pairs ()" 5121 0  "src/Editor.cc" "Editor::graph_float_pairs ()" 9604]
+[ebrowse-ms "init_key_bindings" () 0 () "  void init_key_bindings ()" 2414 0  "src/Editor.cc" "Editor::init_key_bindings ()" 5081]
+[ebrowse-ms "ppl" () 0 () "  void ppl ()" 5299 0  "src/Editor.cc" "Editor::ppl ()" 11200]
+[ebrowse-ms "read_char" () 9 () "  virtual bool read_char (int" 2080 0  () () 0]
+[ebrowse-ms "run" () 0 () "  int run ()" 3178 0  () "  int run ()" 3178]
+[ebrowse-ms "run" () 9 () "  virtual int run (string" 3094 0  () () 0]
+[ebrowse-ms "set_tab_width" () 0 () "  void set_tab_width (int" 2653 0  () "  void set_tab_width (int" 2653]
+[ebrowse-ms "~Editor" () 1 () "  virtual ~Editor ()" 2986 0  () "  virtual ~Editor ()" 2986]
+)
+([ebrowse-ms "version_string" () 0 () "  static string version_string;" 793 2  "src/Editor.cc" "string Editor::version_string = \"Editor 0.01\";" 847]
+)
+([ebrowse-ms "version" () 0 () "  static string version ()" 5328 0  "src/Editor.cc" "Editor::version ()" 12030]
+)
+([ebrowse-ms "clip_line" () 0 () "  friend int clip_line ()" 5478 0  "src/bindables.cc" "clip_line ()" 748]
+[ebrowse-ms "insert_last_input_char" () 0 () "  friend int insert_last_input_char ()" 5451 0  "src/bindables.cc" "insert_last_input_char ()" 190]
+[ebrowse-ms "interpret_last_input" () 0 () "  friend int interpret_last_input (void" 5401 0  "src/Editor.cc" "interpret_last_input (void" 4361]
+)
+()
+()()
+][ebrowse-ts [ebrowse-cs "buffer" () 0() () 0() ]
+()()
+()
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "std" "cons" 0() () 0"include/Cons.h" ]
+()()
+([ebrowse-ms "operator <<" () 32 () () 0 0  () "  operator<< (std" 4023]
+)
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "std" () 0() () 0"include/CommandLine.h" ]
+()([ebrowse-ms "cout" () 0 () () 0 0  "src/gdit.cc" "using std::cout;" 148]
+[ebrowse-ms "map" () 0 () () 0 0  () "using std::map;" 230]
+[ebrowse-ms "string" () 0 () () 0 0  "src/Window.cc" "using std::string;" 152]
+[ebrowse-ms "vector" () 0 () () 0 0  "include/Window.h" "using std::vector;" 211]
+)
+()
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "std" "buffer" 0() () 0"include/Buffer.h" ]
+()([ebrowse-ms "string" () 0 () () 0 0  () "  using std::string;" 202]
+)
+()
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "Buffer" "buffer" 0"include/Buffer.h" "  class Buffer
+  {" 261"include/Buffer.h" ]
+([ebrowse-ts [ebrowse-cs "CERNBuffer" "buffer" 0"include/CERNBuffer.h" "  class CERNBuffer :" 287"include/CERNBuffer.h" ]
+()()
+([ebrowse-ms "CERNBuffer" () 0 () "	CERNBuffer (std::string file_name) :" 406 0  () "	CERNBuffer (std::string file_name) :" 406]
+[ebrowse-ms "CERNBuffer" () 0 () "	CERNBuffer () {" 331 0  () "	CERNBuffer () {" 331]
+[ebrowse-ms "random_fill" () 1 () "	void random_fill (int" 612 0  () "	void random_fill (int" 612]
+[ebrowse-ms "~CERNBuffer" () 0 () "	~CERNBuffer ()" 466 0  () "	~CERNBuffer ()" 466]
+)
+()
+()
+()
+()
+()()
+])([ebrowse-ms "content" () 0 () "	Cons *content;" 463 0  () () 0]
+[ebrowse-ms "file_name" () 0 () "	string file_name;" 338 0  () () 0]
+[ebrowse-ms "mark" () 0 () "	Cons *mark;" 404 0  () () 0]
+[ebrowse-ms "modified" () 0 () "	bool modified;" 510 0  () () 0]
+[ebrowse-ms "point" () 0 () "	Cons *point;" 353 0  () () 0]
+[ebrowse-ms "tab_width" () 0 () "	int tab_width;" 556 0  () () 0]
+)
+([ebrowse-ms "Buffer" () 0 () "	Buffer (string file_name);" 763 0  "src/Buffer.cc" "  Buffer::Buffer (string file_name) :" 206]
+[ebrowse-ms "Buffer" () 0 () "	Buffer () :" 604 0  () "	Buffer () :" 604]
+[ebrowse-ms "backward_line" () 0 () "	Cons* backward_line ()" 2974 0  "src/Buffer.cc" "  Buffer::backward_line ()" 7400]
+[ebrowse-ms "beginning_of_line" () 0 () "	Cons* beginning_of_line ()" 3058 0  "src/Buffer.cc" "  Buffer::beginning_of_line ()" 7990]
+[ebrowse-ms "clip_char" () 0 () "	Cons* clip_char (int" 1353 0  "src/Buffer.cc" "  Buffer::clip_char (int" 4073]
+[ebrowse-ms "clip_to" () 0 () "	Cons* clip_to (Cons" 1482 0  "src/Buffer.cc" "  Buffer::clip_to (Cons" 2491]
+[ebrowse-ms "copy_to" () 0 () "	Cons* copy_to (Cons" 1577 0  "src/Buffer.cc" "  Buffer::copy_to (Cons" 3395]
+[ebrowse-ms "current_column" () 0 () "	int current_column ()" 1070 0  "src/Buffer.cc" "  Buffer::current_column ()" 1327]
+[ebrowse-ms "current_line" () 0 () "	int current_line ()" 992 0  "src/Buffer.cc" "  Buffer::current_line ()" 1244]
+[ebrowse-ms "end_of_line" () 0 () "	Cons* end_of_line ()" 3130 0  "src/Buffer.cc" "  Buffer::end_of_line ()" 8198]
+[ebrowse-ms "forward_chars" () 0 () "	Cons* forward_chars (int" 1973 0  "src/Buffer.cc" "  Buffer::forward_chars (int" 4908]
+[ebrowse-ms "forward_chars" () 0 () "	Cons* forward_chars (int" 1772 0  "src/Buffer.cc" "  Buffer::forward_chars (int" 4807]
+[ebrowse-ms "forward_line" () 0 () "	Cons* forward_line ()" 2821 0  "src/Buffer.cc" "  Buffer::forward_line ()" 6943]
+[ebrowse-ms "get_buffer_as_string" () 0 () "	string get_buffer_as_string ()" 3531 0  "src/Buffer.cc" "  Buffer::get_buffer_as_string ()" 8634]
+[ebrowse-ms "get_line_as_string" () 0 () "	string get_line_as_string ()" 3434 0  "src/Buffer.cc" "  Buffer::get_line_as_string ()" 8365]
+[ebrowse-ms "insert" () 0 () "	Cons* insert (Cons" 1248 0  "src/Buffer.cc" "  Buffer::insert (Cons" 1979]
+[ebrowse-ms "insert_char" () 0 () "	Cons* insert_char (void" 1141 0  "src/Buffer.cc" "  Buffer::insert_char (void" 1635]
+[ebrowse-ms "next_line" () 0 () "	Cons* next_line (int" 2248 0  "src/Buffer.cc" "  Buffer::next_line (int" 5319]
+[ebrowse-ms "next_window_line" () 0 () "	Cons* next_window_line (int" 2721 0  "src/Buffer.cc" "  Buffer::next_window_line (int" 5674]
+[ebrowse-ms "random_fill" () 1 () "	virtual void random_fill (int" 3281 0  () "	virtual void random_fill (int" 3281]
+[ebrowse-ms "swap_positions" () 2 () "	inline void swap_positions ()" 3192 0  () "  Buffer::swap_positions ()" 4510]
+[ebrowse-ms "write" () 0 () "	int write ()" 918 0  "src/Buffer.cc" "  Buffer::write ()" 825]
+[ebrowse-ms "~Buffer" () 1 () "	virtual ~Buffer ()" 796 0  () "	virtual ~Buffer ()" 796]
+)
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "Gtk" () 0() () 0() ]
+()()
+()
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "cons" "buffer" 0() () 0() ]
+()()
+()
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "cons" () 0() () 0() ]
+()()
+()
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "ConsT" "cons" 32"include/Cons.h" "  class ConsT
+  {" 329"include/Cons.h" ]
+()([ebrowse-ms "_car" () 0 () "	T *_car;" 463 1  () () 0]
+[ebrowse-ms "_cdr" () 0 () "	ConsT<T> *_cdr;" 514 1  () () 0]
+[ebrowse-ms "free_cdr" () 0 () "	bool free_cdr;" 606 0  () () 0]
+)
+([ebrowse-ms "T" () 0 () "	ConsT<T> (const" 866 0  () "	ConsT<T> (const" 866]
+[ebrowse-ms "T" () 0 () "	ConsT<T> (T" 752 0  () "	ConsT<T> (T" 752]
+[ebrowse-ms "T" () 0 () "	ConsT<T> ()" 636 0  () "	ConsT<T> ()" 636]
+[ebrowse-ms "car" () 0 () "	T* car ()" 1064 0  () "	T* car ()" 1064]
+[ebrowse-ms "cdr" () 0 () "	ConsT<T>* cdr ()" 1123 0  () "	ConsT<T>* cdr ()" 1123]
+[ebrowse-ms "setcar" () 0 () "	T* setcar (T" 1199 0  () "	T* setcar (T" 1199]
+[ebrowse-ms "setcdr" () 0 () "	ConsT<T>* setcdr (ConsT" 1298 0  () "	ConsT<T>* setcdr (ConsT" 1298]
+[ebrowse-ms "~T" () 1 () "	virtual ~ConsT<T> ()" 998 0  () "	virtual ~ConsT<T> ()" 998]
+)
+()
+()
+([ebrowse-ms "print_cons" () 32 () "	friend void print_cons<> (std" 1362 0  () "  print_cons (std" 3781]
+)
+()
+()()
+][ebrowse-ts [ebrowse-cs "Window" () 0"include/Window.h" "class Window
+{" 282"include/Window.h" ]
+([ebrowse-ts [ebrowse-cs "SupplyWindow" () 0"include/SupplyWindow.h" "class SupplyWindow :" 187"include/SupplyWindow.h" ]
+()([ebrowse-ms "content" () 0 () "  cons::Cons *content;" 238 1  () () 0]
+[ebrowse-ms "more_chars" () 0 () "  bool more_chars;" 479 0  () () 0]
+[ebrowse-ms "one_passed_mark" () 0 () "  bool one_passed_mark;" 596 0  () () 0]
+[ebrowse-ms "one_passed_point" () 0 () "  bool one_passed_point;" 572 0  () () 0]
+[ebrowse-ms "start_already_adjusted" () 0 () "  bool start_already_adjusted;" 400 0  () () 0]
+)
+([ebrowse-ms "SupplyWindow" () 0 () "				int height)
+	:" 741 0  () "				int height)
+	:" 741]
+[ebrowse-ms "SupplyWindow" () 0 () "  SupplyWindow () :" 615 0  () "  SupplyWindow () :" 615]
+[ebrowse-ms "next_char" () 0 () "  char next_char ()" 1211 0  "src/SupplyWindow.cc" "SupplyWindow::next_char ()" 2129]
+[ebrowse-ms "prepare" () 0 () "  bool prepare ()" 1144 0  "src/SupplyWindow.cc" "SupplyWindow::prepare ()" 124]
+[ebrowse-ms "~SupplyWindow" () 0 () "  ~SupplyWindow ()" 982 0  () "  ~SupplyWindow ()" 982]
+)
+()
+()
+()
+()
+()()
+])([ebrowse-ms "buffer" () 0 () "  buffer::Buffer *buffer;" 823 0  () () 0]
+[ebrowse-ms "current_column" () 0 () "  int current_column;" 865 0  () () 0]
+[ebrowse-ms "current_line" () 0 () "  int current_line;" 843 0  () () 0]
+[ebrowse-ms "editor" () 0 () "  Editor *editor;" 1023 0  () () 0]
+[ebrowse-ms "height" () 0 () "  int height;" 529 0  () () 0]
+[ebrowse-ms "mode_line" () 0 () "  string mode_line;" 614 0  () () 0]
+[ebrowse-ms "mode_line_format" () 0 () "  string mode_line_format;" 696 0  () () 0]
+[ebrowse-ms "scroll_margin" () 0 () "  int scroll_margin;" 478 0  () () 0]
+[ebrowse-ms "start" () 0 () "  cons::Cons *start;" 951 0  () () 0]
+[ebrowse-ms "width" () 0 () "  int width;" 542 0  () () 0]
+)
+([ebrowse-ms "Window" () 0 () "		  int height)
+  {" 1237 0  () "		  int height)
+  {" 1237]
+[ebrowse-ms "Window" () 0 () "  Window ()
+  {" 1036 0  () "  Window ()
+  {" 1036]
+[ebrowse-ms "backward_window_page" () 0 () "  void backward_window_page ()" 1870 0  "src/Window.cc" "Window::backward_window_page ()" 2413]
+[ebrowse-ms "center" () 2 () "  inline void center ()" 1788 0  () "Window::center ()" 1985]
+[ebrowse-ms "forward_window_page" () 0 () "  void forward_window_page ()" 1950 0  "src/Window.cc" "Window::forward_window_page ()" 2776]
+[ebrowse-ms "get_mode_line" () 0 () "  string get_mode_line ()" 1682 0  "src/Window.cc" "Window::get_mode_line ()" 185]
+[ebrowse-ms "get_tab_width" () 0 () "  int get_tab_width ()" 1581 0  () "  int get_tab_width ()" 1581]
+[ebrowse-ms "~Window" () 0 () "  ~Window ()" 1519 0  () "  ~Window ()" 1519]
+)
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "Window" "Gtk" 0() () 0() ]
+([ebrowse-ts [ebrowse-cs "GTKEditor" () 0"include/GTKEditor.h" "class GTKEditor :" 186"include/GTKEditor.h" ]
+()()
+([ebrowse-ms "GTKEditor" () 0 () "  GTKEditor ()
+  {" 345 0  () "  GTKEditor ()
+  {" 345]
+[ebrowse-ms "clear" () 0 () "  void clear ()" 582 0  () "  void clear ()" 582]
+[ebrowse-ms "display" () 1 () "  void display ()" 252 1  () "  void display ()" 252]
+[ebrowse-ms "run" () 1 () "  int run (std" 502 0  () "  int run (std" 502]
+[ebrowse-ms "~GTKEditor" () 1 () "  virtual ~GTKEditor ()" 420 0  () "  virtual ~GTKEditor ()" 420]
+)
+([ebrowse-ms "initial_cursor_state" () 0 () "  static int initial_cursor_state;" 329 0  () () 0]
+)
+()
+()
+()
+()()
+])()
+()
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "CommandLine" () 32"include/CommandLine.h" "class CommandLine
+{" 333"include/CommandLine.h" ]
+([ebrowse-ts [ebrowse-cs "Cruse" () 0"include/Cruse.h" "class Cruse :" 233"include/Cruse.h" ]
+()()
+([ebrowse-ms "Cruse" () 0 () "  Cruse (int argc, char **argv)
+	:" 304 0  () "  Cruse (int argc, char **argv)
+	:" 304]
+[ebrowse-ms "print_version" () 0 () "  print_version (string" 1221 0  () "  print_version (string" 1221]
+[ebrowse-ms "set_scroll_margin" () 0 () "  set_scroll_margin (string" 1496 0  () "  set_scroll_margin (string" 1496]
+[ebrowse-ms "set_tab_width" () 0 () "  set_tab_width (string" 1676 0  () "  set_tab_width (string" 1676]
+[ebrowse-ms "start" () 1 () "  int start ()" 995 0  () "  int start ()" 995]
+[ebrowse-ms "~Cruse" () 1 () "  virtual ~Cruse ()" 925 0  () "  virtual ~Cruse ()" 925]
+)
+()
+()
+()
+()
+()()
+])([ebrowse-ms "argc" () 0 () "  int argc;" 593 1  () () 0]
+[ebrowse-ms "args" () 0 () "  vector<string> args;" 513 1  () () 0]
+[ebrowse-ms "args_expected" () 0 () "  int args_expected;" 693 1  () () 0]
+[ebrowse-ms "argv" () 0 () "  char **argv;" 608 1  () () 0]
+[ebrowse-ms "current_arg" () 0 () "  vector<string>::iterator current_arg;" 580 1  () () 0]
+[ebrowse-ms "handlers_object" () 0 () "  T *handlers_object;" 489 1  () () 0]
+[ebrowse-ms "usage" () 0 () "  string usage;" 625 1  () () 0]
+)
+([ebrowse-ms "CommandLine" () 32 () "ine (int argc, char **argv, T *handlers_object);" 830 0  () "T> (int argc, char **argv, T *handlers_object)
+{" 1869]
+[ebrowse-ms "CommandLine" () 32 () "  CommandLine (int argc, char **argv);" 791 0  () "ine<T>::CommandLine<T> (int argc, char **argv)
+{" 1468]
+[ebrowse-ms "CommandLine" () 0 () "  CommandLine () :" 720 0  () "  CommandLine () :" 720]
+[ebrowse-ms "next_arg" () 32 () "  string next_arg ()" 1145 0  () "CommandLine<T>::next_arg ()" 2510]
+[ebrowse-ms "print_usage" () 32 () "  void print_usage (string" 1206 0  () "CommandLine<T>::print_usage (string" 2301]
+[ebrowse-ms "print_usage_and_exit" () 32 () "  void print_usage_and_exit (string" 1310 0  () "CommandLine<T>::print_usage_and_exit (string" 2402]
+[ebrowse-ms "process_args" () 32 () "  void process_args (int" 1015 0  () "CommandLine<T>::process_args (int" 2640]
+[ebrowse-ms "start" () 9 () "  virtual int start ()" 1404 0  () () 0]
+[ebrowse-ms "string" () 0 () "  map<string,void(T" 398 1  () () 0]
+[ebrowse-ms "~CommandLine" () 1 () "  virtual ~CommandLine ()" 896 0  () "  virtual ~CommandLine ()" 896]
+)
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "Cons" "cons" 0() () 0() ]
+([ebrowse-ts [ebrowse-cs "BasicCons" "cons" 0"include/Cons.h" "  class BasicCons :" 4196"include/Cons.h" ]
+()()
+([ebrowse-ms "BasicCons" () 0 () "	BasicCons (const BasicCons& cons) :" 4498 0  () "	BasicCons (const BasicCons& cons) :" 4498]
+[ebrowse-ms "BasicCons" () 0 () "	BasicCons (void *car, Cons *cdr) :" 4395 0  () "	BasicCons (void *car, Cons *cdr) :" 4395]
+[ebrowse-ms "BasicCons" () 0 () "	BasicCons () {" 4304 0  () "	BasicCons () {" 4304]
+[ebrowse-ms "~BasicCons" () 0 () "	~BasicCons ()" 4568 0  () "	~BasicCons ()" 4568]
+)
+()
+()
+()
+()
+()()
+])()
+()
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "vector" () 0() () 0() ]
+()()
+()
+()
+()
+()
+()
+()()
+][ebrowse-ts [ebrowse-cs "*Globals*" () 0() () 0"include/Buffer.h" ]
+()([ebrowse-ms "Cons" () 0 () () 0 0  "src/bindables.cc" "using cons::Cons;" 140]
+[ebrowse-ms "ConsT" () 0 () () 0 0  "src/Editor.cc" "using cons::ConsT;" 775]
+[ebrowse-ms "cons" () 0 () () 0 0  () "  using namespace cons;" 181]
+[ebrowse-ms "ed" () 0 () () 0 0  "src/PythonedEditor.cc" "Editor *ed;" 201]
+[ebrowse-ms "hil" () 0 () () 0 0  "src/bindables.cc" "using buffer::hil;" 159]
+[ebrowse-ms "program_invocation_name" () 0 () () 0 0  "include/CommandLine.h" "invocation_short_name, *program_invocation_name;" 294]
+[ebrowse-ms "program_invocation_short_name" () 0 () () 0 0  "include/CommandLine.h" "char *program_invocation_short_name," 268]
+)
+([ebrowse-ms "COMMON_BLOCK_DEF" () 0 "src/Editor.cc" "COMMON_BLOCK_DEF (PAWC_DEF" 711 0  () () 0]
+[ebrowse-ms "Simple_wrap_test" () 0 "src/PythonedEditor.cc" "std::string Simple_wrap_test (PythonedEditor" 295 0  "src/py_simple_wrap_test.cc" "Simple_wrap_test (PythonedEditor" 208]
+[ebrowse-ms "backward_char" () 0 "include/bindables.h" "int backward_char ()" 744 0  "src/bindables.cc" "backward_char ()" 617]
+[ebrowse-ms "backward_line" () 0 "include/bindables.h" "int backward_line ()" 1180 0  "src/bindables.cc" "backward_line ()" 1449]
+[ebrowse-ms "backward_window_page" () 0 "include/bindables.h" "int backward_window_page ()" 1356 0  "src/bindables.cc" "backward_window_page ()" 1653]
+[ebrowse-ms "backward_word" () 0 "include/bindables.h" "int backward_word ()" 2141 0  "src/bindables.cc" "backward_word ()" 3453]
+[ebrowse-ms "bind_key" () 0 "include/PythonedEditor.h" "void bind_key (int" 1822 0  "src/PythonedEditor.cc" "bind_key (int" 5804]
+[ebrowse-ms "bind_sequence" () 0 "include/PythonedEditor.h" "void bind_sequence (char" 1924 0  "src/PythonedEditor.cc" "bind_sequence (char" 5681]
+[ebrowse-ms "bob" () 0 "include/bindables.h" "int bob ()" 1995 0  "src/bindables.cc" "bob ()" 2945]
+[ebrowse-ms "bol" () 0 "include/bindables.h" "int bol ()" 472 0  "src/bindables.cc" "bol ()" 275]
+[ebrowse-ms "c_str" () 0 "include/PythonedEditor.h" "c_str (PyObject" 1639 0  "src/PythonedEditor.cc" "c_str (PyObject" 7265]
+[ebrowse-ms "center_window" () 0 "include/bindables.h" "int center_window ()" 957 0  "src/bindables.cc" "center_window ()" 1207]
+[ebrowse-ms "char_to_pointer" () 0 "include/PythonedEditor.h" "char_to_pointer (char" 1490 0  "src/PythonedEditor.cc" "char_to_pointer (char" 7207]
+[ebrowse-ms "clip_char" () 0 "include/bindables.h" "int clip_char ()" 806 0  "src/bindables.cc" "clip_char ()" 685]
+[ebrowse-ms "clip_char_back" () 0 "include/bindables.h" "int clip_char_back ()" 1927 0  "src/bindables.cc" "clip_char_back ()" 2887]
+[ebrowse-ms "clip_line" () 0 "include/bindables.h" "int clip_line ()" 878 0  "src/bindables.cc" "clip_line ()" 748]
+[ebrowse-ms "clip_region" () 0 "include/bindables.h" "int clip_region ()" 1435 0  "src/bindables.cc" "clip_region ()" 1773]
+[ebrowse-ms "cons_wrap_test" () 0 "src/PythonedEditor.cc" "std::string cons_wrap_test ()" 249 0  "src/py_cons_wrap_test.cc" "cons_wrap_test ()" 179]
+[ebrowse-ms "copy_list" () 32 "include/Cons.h" "  copy_list (ConsT" 3046 0  "include/Cons.h" "  copy_list (ConsT" 3046]
+[ebrowse-ms "copy_region" () 0 "include/bindables.h" "int copy_region ()" 2306 0  "src/bindables.cc" "copy_region ()" 4317]
+[ebrowse-ms "distance" () 32 "include/Cons.h" "  distance (ConsT" 2628 0  "include/Cons.h" "  distance (ConsT" 2628]
+[ebrowse-ms "eob" () 0 "include/bindables.h" "int eob ()" 2057 0  "src/bindables.cc" "eob ()" 3119]
+[ebrowse-ms "eol" () 0 "include/bindables.h" "int eol ()" 532 0  "src/bindables.cc" "eol ()" 359]
+[ebrowse-ms "eq" () 0 "include/Editor.h" "bool eq (void" 5666 0  "src/Editor.cc" "eq (void" 12136]
+[ebrowse-ms "eval_mpi_expr" () 0 "include/bindables.h" "int eval_mpi_expr ()" 2583 0  "src/bindables.cc" "eval_mpi_expr ()" 4678]
+[ebrowse-ms "eval_py_function" () 0 "include/PythonedEditor.h" "int eval_py_function (void" 1745 0  "src/PythonedEditor.cc" "eval_py_function (void" 6835]
+[ebrowse-ms "evaluate_file" () 0 "include/bindables.h" "int evaluate_file ()" 1661 0  "src/bindables.cc" "evaluate_file ()" 2430]
+[ebrowse-ms "evaluate_region" () 0 "include/bindables.h" "int evaluate_region ()" 1740 0  "src/bindables.cc" "evaluate_region ()" 2490]
+[ebrowse-ms "find_but" () 32 "include/Cons.h" "  find_but (ConsT" 1918 0  "include/Cons.h" "  find_but (ConsT" 1918]
+[ebrowse-ms "finish" () 0 "src/CursedEditor.cc" "finish (int" 386 0  "src/CursedEditor.cc" "finish (int" 386]
+[ebrowse-ms "forward_char" () 0 "include/bindables.h" "int forward_char ()" 674 0  "src/bindables.cc" "forward_char ()" 547]
+[ebrowse-ms "forward_line" () 0 "include/bindables.h" "int forward_line ()" 1107 0  "src/bindables.cc" "forward_line ()" 1380]
+[ebrowse-ms "forward_window_page" () 0 "include/bindables.h" "int forward_window_page ()" 1271 0  "src/bindables.cc" "forward_window_page ()" 1525]
+[ebrowse-ms "forward_word" () 0 "include/bindables.h" "int forward_word ()" 2216 0  "src/bindables.cc" "forward_word ()" 3972]
+[ebrowse-ms "free_key_map" () 0 "src/Editor.cc" "free_key_map (key_map" 2960 0  "src/Editor.cc" "free_key_map (key_map" 2960]
+[ebrowse-ms "graph_pairs" () 0 "include/bindables.h" "int graph_pairs ()" 2480 0  "src/bindables.cc" "graph_pairs ()" 4612]
+[ebrowse-ms "init_Simple" () 256 "src/PythonedEditor.cc" "  void init_Simple (void" 375 0  () () 0]
+[ebrowse-ms "init_cons" () 256 "src/PythonedEditor.cc" "  void init_cons (void" 348 0  () () 0]
+[ebrowse-ms "insert_last_input_char" () 0 "include/bindables.h" "int insert_last_input_char ()" 406 0  "src/bindables.cc" "insert_last_input_char ()" 190]
+[ebrowse-ms "insert_newline" () 0 "include/bindables.h" "int insert_newline ()" 1036 0  "src/bindables.cc" "insert_newline ()" 1295]
+[ebrowse-ms "interpret_last_input" () 0 "include/Editor.h" "int interpret_last_input (void" 604 0  "src/Editor.cc" "interpret_last_input (void" 4361]
+[ebrowse-ms "is_alphanum" () 0 "include/Editor.h" "bool is_alphanum (void" 5575 0  "src/Editor.cc" "is_alphanum (void" 12083]
+[ebrowse-ms "last" () 32 "include/Cons.h" "  last (ConsT" 2283 0  "include/Cons.h" "  last (ConsT" 2283]
+[ebrowse-ms "last" () 32 "include/Cons.h" "  last (ConsT" 1716 0  "include/Cons.h" "  last (ConsT" 1716]
+[ebrowse-ms "length" () 32 "include/Cons.h" "  length (ConsT" 1498 0  "include/Cons.h" "  length (ConsT" 1498]
+[ebrowse-ms "line_distance" () 0 "include/Buffer.h" "  int line_distance (Cons" 3914 0  "src/Buffer.cc" "  line_distance (Cons" 8995]
+[ebrowse-ms "lines" () 0 "include/Buffer.h" "  int lines (Cons" 3620 0  "src/Buffer.cc" "  lines (Cons" 10709]
+[ebrowse-ms "list_to_string" () 32 "include/Cons.h" "  list_to_string (ConsT" 3584 0  "include/Cons.h" "  list_to_string (ConsT" 3584]
+[ebrowse-ms "main" () 0 "src/cruse.cc" "main (int" 97 0  "src/gdit.cc" "main (int" 503]
+[ebrowse-ms "ppl_buffer" () 0 "include/bindables.h" "int ppl_buffer ()" 2681 0  "src/bindables.cc" "ppl_buffer ()" 4737]
+[ebrowse-ms "print" () 0 "include/printCons.h" "int print (Cons" 172 0  "include/printCons.h" "int print (Cons" 172]
+[ebrowse-ms "print_cons" () 32 "include/Cons.h" "  template <class T> void print_cons (std" 257 0  "include/Cons.h" "  print_cons (std" 3781]
+[ebrowse-ms "push_input" () 0 "src/Editor.cc" "push_input (int" 1283 0  "src/Editor.cc" "push_input (int" 1283]
+[ebrowse-ms "random_fill" () 0 "include/bindables.h" "int random_fill ()" 2391 0  "src/bindables.cc" "random_fill ()" 4542]
+[ebrowse-ms "return_break" () 0 "include/bindables.h" "int return_break ()" 1584 0  "src/bindables.cc" "return_break ()" 2392]
+[ebrowse-ms "set_mark" () 0 "include/bindables.h" "int set_mark ()" 606 0  "src/bindables.cc" "set_mark ()" 442]
+[ebrowse-ms "set_tab_width" () 0 "include/PythonedEditor.h" "set_tab_width (vector" 1358 0  "src/PythonedEditor.cc" "set_tab_width (vector" 7093]
+[ebrowse-ms "string_to_list" () 32 "include/Cons.h" "  string_to_list (std" 3285 0  "include/Cons.h" "  string_to_list (std" 3285]
+[ebrowse-ms "swap_positions" () 0 "include/bindables.h" "int swap_positions ()" 1803 0  "src/bindables.cc" "swap_positions ()" 2551]
+[ebrowse-ms "usage" () 0 "src/gdit.cc" "usage ()" 163 0  "src/gdit.cc" "usage ()" 163]
+[ebrowse-ms "window_line_distance" () 0 "include/Buffer.h" "  int window_line_distance (Cons" 4439 0  "src/Buffer.cc" "  window_line_distance (Cons" 9695]
+[ebrowse-ms "write_buffer" () 0 "include/bindables.h" "int write_buffer ()" 1509 0  "src/bindables.cc" "write_buffer ()" 2262]
+[ebrowse-ms "yank" () 0 "include/bindables.h" "int yank ()" 1861 0  "src/bindables.cc" "yank ()" 2701]
+)
+()
+()
+([ebrowse-ms "INIT_TAB_WIDTH" () 512 () () 0 0  () "#define INIT_TAB_WIDTH " 136]
+[ebrowse-ms "INPUT_BUFFER_SIZE" () 512 () () 0 0  "include/Editor.h" "#define INPUT_BUFFER_SIZE " 366]
+[ebrowse-ms "KEY_TABLE_SIZE" () 512 () () 0 0  "include/Editor.h" "#define KEY_TABLE_SIZE " 332]
+[ebrowse-ms "LINEFEED" () 512 () () 0 0  "src/Buffer.cc" "#define LINEFEED " 109]
+[ebrowse-ms "PAWC" () 512 () () 0 0  "src/Editor.cc" "#define PAWC " 660]
+[ebrowse-ms "PAWC_SIZE" () 512 () () 0 0  "src/Editor.cc" "#define PAWC_SIZE " 589]
+[ebrowse-ms "SIZE" () 512 () () 0 0  "src/Window.cc" "#define	SIZE " 734]
+[ebrowse-ms "_BasicSimple_h" () 512 () () 0 0  "include/Simple.h" "#define _BasicSimple_h
+" 155]
+[ebrowse-ms "_Buffer_h" () 512 () () 0 0  () "#define _Buffer_h
+" 75]
+[ebrowse-ms "_CERNBuffer_h" () 512 () () 0 0  "include/CERNBuffer.h" "#define _CERNBuffer_h
+" 108]
+[ebrowse-ms "_CommandLine_h" () 512 () () 0 0  "include/CommandLine.h" "#define _CommandLine_h
+" 104]
+[ebrowse-ms "_Cons_h" () 512 () () 0 0  "include/Cons.h" "#define _Cons_h
+" 88]
+[ebrowse-ms "_Cruse_h" () 512 () () 0 0  "include/Cruse.h" "#define _Cruse_h
+" 90]
+[ebrowse-ms "_CursedEditor_h" () 512 () () 0 0  "include/CursedEditor.h" "#define _CursedEditor_h
+" 116]
+[ebrowse-ms "_Editor_h" () 512 () () 0 0  "include/Editor.h" "#define _Editor_h
+" 94]
+[ebrowse-ms "_GTKEditor_h" () 512 () () 0 0  "include/GTKEditor.h" "#define _GTKEditor_h
+" 110]
+[ebrowse-ms "_PythonedEditor_h" () 512 () () 0 0  "include/PythonedEditor.h" "#define _PythonedEditor_h
+" 116]
+[ebrowse-ms "_SupplyWindow_h" () 512 () () 0 0  "include/SupplyWindow.h" "#define _SupplyWindow_h
+" 107]
+[ebrowse-ms "_Window_h" () 512 () () 0 0  "include/Window.h" "#define _Window_h
+" 81]
+[ebrowse-ms "_bindables_h" () 512 () () 0 0  "include/bindables.h" "#define _bindables_h
+" 305]
+[ebrowse-ms "extname" () 512 () () 0 0  "src/Editor.cc" "#define extname
+" 563]
+[ebrowse-ms "str" () 512 () () 0 0  "src/CursedEditor.cc" "#define str(" 248]
+[ebrowse-ms "xstr" () 512 () () 0 0  "src/CursedEditor.cc" "#define xstr(" 225]
+)
+([ebrowse-ms "Cons" () 0 () () 0 0  "include/Cons.h" "  typedef ConsT<void> Cons;" 4174]
+[ebrowse-ms "key_map" () 0 () () 0 0  "include/Editor.h" "typedef key_binding key_map[KEY_TABLE_SIZE];" 736]
+)
+()()
+]

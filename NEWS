@@ -1,0 +1,103 @@
+New in Cruse:									-*- outline -*-
+
+* Version 0.0.9  (January 8, 2022)
+==================================
+
+** Get it building on recent system
+
+
+* Version 0.0.8  (May 14, 2006)
+===============================
+
+** The -fPIC argument, in the C++ flags
+
+** Linking of the shared library to the CERN libraries only if required
+
+** `#include <cstdio>' style includes (vs #include <stdio.h>)
+
+** Better handling of the mode line when it is longer than the window width
+   Corrects wrapping of the mode line, and sometimes program
+   termination, when the mode line is longer than the width of the
+   window.
+
+** Echoing of the names of any exceptions thrown during the display loop
+
+
+* Version 0.0.7  (December 16, 2004)
+====================================
+
+** A few changes to correct compilation under g++ 3.4
+
+
+* Version 0.0.6  (December 8, 2004)
+===================================
+
+** Parma Polyhedra Library (PPL) example
+   C-cp echoes a description of the polyhedron defined (in PPL ascii
+   dump format) by the current buffer.  "test/ppl-*" are example
+   files.  "etc/shot-ppl.png" is a screen shot.  Presence in build
+   determined by the "PPL" directive.
+
+
+* Version 0.0.5  (December 4, 2004)
+===================================
+
+** Multiple precision integer expression evaluation
+   C-ci evaluates the MP expression on the current line using GMP's
+   "expr" demo library.  The result is echoed.  Examples in
+   "test/gmp".  "etc/shot-gmp.png" is a screen shot.  Presence in
+   build determined by the "GMP" directive.
+
+
+* Version 0.0.4  (November 18, 2004)
+====================================
+
+** A small CERN library demo
+   C-cr writes a 1000 pairs of random numbers at point, and C-cg
+   displays distribution graphs of the numbers.  There's a screen shot
+   of the graphs in "etc/shot-cern.png".
+
+** Better display adjustment after point moves out of the window
+   Specifically, the window includes point after yanking of large
+   amounts of text, and after swapping point and mark across the edges
+   of the window.
+
+
+* Version 0.0.3
+===============
+
+** CommandLine improvements
+   Member functions used directly, instead of wrapper functions.
+
+** Dynamic key binding
+   Keys are bindable from Python with bind_key and bind_sequence.
+
+** Python extensions transpose_chars (C-t) and transpose_lines (C-x C-t)
+
+** Correct clip_word (M-d) behaviour when point is at the end of a word
+
+** File etc/KEYS
+   A list of the initial key bindings.
+
+
+* Version 0.0.2
+===============
+
+Corrected some movement errors.  Improved directory structure.  Better
+access to the editor objects from Python, hence M-d clips a word using
+a Python function.  Key bindings are still static though.
+
+
+* Version 0.0.1
+===============
+
+More movement and editing key bindings.  The mark, and a clip list,
+for clipping, copying and yanking.  A start at extensibility with
+Python.  Now called Cruse.
+
+
+* Version 0.0
+=============
+
+Initial version.  Very basic editing.  Static key bindings.  Uses
+ncurses for display.

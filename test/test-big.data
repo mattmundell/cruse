@@ -1,0 +1,289 @@
+001: /* Editor.cc -- Editor
+002:
+003: a looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong line.
+004:
+005: C++ revision.  */
+006:
+007: #ifndef _Editor_h
+008: #define _Editor_h
+009:
+010: #include "Buffer.h"
+011: #include <iostream>
+012: #include <termios.h>
+013: #ifdef NCURSES
+014: #include <curses.h>
+015: #endif
+016:
+017: using std::cout;
+018:
+019:
+020: class Editor
+021: {
+022:  private:
+023:   Cons *buffers;
+024:   Buffer *current_buffer;
+025:   int initial_cursor_state;
+026:   int spaces_per_tab;
+027:
+028:   void display ()
+029: f  {
+030: 	Cons *contsdfsdfent;
+031:
+032: #ifdef NCURSES
+033: 	erase ();
+034: 	content = current_buffer->content;
+035: 	while (1)
+036: 	  {
+037: 		char ch;
+038:
+039: 		if (content)
+040: 		  ch = (char) (int) content->car ();
+041: 		else
+042: 		  ch = '\n';
+043:
+044: 		if (content == current_buffer->point)
+045: 		  {
+046: 			attron (COLOR_PAIR (1));
+047: 			attron (A_REVERSE);
+048: 			if (ch == '\r' || ch == '\n')
+049: 			  addstr (" \n");
+050: ffffffff			else
+051: 			  addch (ch);
+052: 			attroff (A_REVERSE);
+053: 			attroff (COLOR_PAIR (1));
+054: 		  }
+055: 		else
+056: 		  if (ch == '\r')
+057: 			addch ('\n');
+058: 		  else
+059: 			addch (ch);
+060:
+061: 		if (content == NULL)
+062: 		  break;
+063: 		content = content->cdr ();
+064: 	  }
+065:
+066: #if 1
+067: 	if (current_buffer->content)
+068: 	  current_buffer->content->print ();
+069: 	else
+070: 	  cout << current_buffer->content;
+071: 	if (current_buffer->point)
+072: 	  current_buffer->point->print ();
+073: 	else
+074: 	  cout << current_buffer->point;
+075: #endif
+076: 	refresh ();
+077: #else
+078: 	cout << endl;
+079: 	content = current_buffer->content;
+080: 	while (1)
+081: 	  {
+082: 		char ch;
+083:
+084: 		if (content)
+085: 		  ch = (char) (int) content->car ();
+086: 		else
+087: 		  ch = '\n';
+088:
+089: 		if (content == current_buffer->point)
+090: 		  if (ch == '\n')
+091: 			cout << "*\n";
+092: 		  else
+093: 			cout << '*';
+094: 		else
+095: 		  cout << ch;
+096:
+097: 		if (content)
+098: 		  content = content->cdr ();
+099: 		else
+100: 		  break;
+101: 	  }
+102:
+103: #if 0 	/* FIX fill the entire screen */
+104: 	int tem;
+105:
+106: 	tem = 25 - current_buffer->lines ();
+107: 	while (tem-- > 0)
+108: 	  cout << endl;
+109: sdfsd#endif
+110:
+111: 	cout << '>';
+112: #endif
+113:   }
+114:
+115:   int display_loop ()
+116:   {
+117: 	char ch;
+118: 	while (1)
+119: 	  {
+120: 		display ();
+121: 		cin.read (&ch, 1);
+122:
+123:  		if (ch == '\001')		/* `C-a' */
+124:  		  current_buffer->point = current_buffer->beginning_of_line ();
+125: 		else if (ch == '\002')	/* `C-b' */
+126: 		  current_buffer->backward_char ();
+127: 		else if (ch == '\004')	/* `C-d' */
+128: 		  current_buffer->del ();
+129:  		else if (ch == '\005')	/* `C-e' */
+130:  		  current_buffer->point = current_buffer->end_of_line ();
+131: 		else if (ch == '\006')	/* `C-f' */
+132: 		  current_buffer->forward_char ();
+133: 		else if (ch == '\011')	/* Tab.  */
+134: 		  for (int i = 0; i < spaces_per_tab; i++)
+135: 			current_buffer->insert ((void*) (int) ' ');
+136:  		else if (ch == '\012')	/* Newline.  */
+137: 		  current_buffer->insert ((void*) (int) '\n');
+138:  		else if (ch == '\014')	/* `C-l' */
+139: 		  {
+140: #ifdef NCURSES
+141: 			clear ();
+142: #endif
+143: 		  }
+144:  		else if (ch == '\015')	/* Carriage return.  */
+145: 		  current_buffer->insert ((void*) (int) '\n');
+146: 		else if (ch == '\016')	/* `C-n' */
+147: 		  current_buffer->forward_line ();
+148:  		else if (ch == '\020')	/* `C-p' */
+149:  		  current_buffer->backward_line ();
+150: 		else if (ch == '\030')	/* `C-x' */
+151: 		  {
+152: 			cin.read (&ch, 1);
+153: 			if (ch == '\003')	/* `C-c' */
+154: 			  break;
+155: 			else if (ch == '\023') /* `C-s' */
+156: 			  current_buffer->write ();
+157: 		  }
+158: 		else if (ch < '\040')	/* Rest of control chars.  */
+159: 		  {
+160: 			cout << "got " << (int) ch;
+161: 		  }
+162: 		else if (ch == '\177')	/* delete */
+163: 		  current_buffer->del (-1);
+164: 		else
+165: 		  current_buffer->insert ((void*) (int) ch);
+166: 	  }
+167:
+168: 	return 1;
+169:   }
+170:
+171:  public:
+172:   Editor () {}
+173:   ~Editor () {};
+174:
+175:   int run (char *file_name)
+176:   {
+177: 	/* Make sure stdin is a terminal. */
+178: 	if (isatty (STDIN_FILENO) == 0)
+179: 	  {
+180: 		fprintf (stderr, "Must be run from a terminal.\n");
+181: 		return EXIT_FAILURE;
+182: 	  }
+183:
+184: 	spaces_per_tab = 4;
+185:
+186: #if NCURSES
+187: 	initscr ();					/* initialise the curses library */
+188: 	keypad (stdscr, TRUE);		/* enable keyboard mapping */
+189: 	intrflush(stdscr, FALSE);   /* else flushes input on interrupts */
+190: 	//nonl ();					/* do not NL->CR/NL on output */
+191: 	nl ();
+192: 	//cbreak ();				/* take input chars one at a time */
+193: 	raw ();
+194: 	noecho ();
+195: 	meta(stdscr, TRUE);
+196: 	typeahead (STDIN_FILENO);
+197:
+198: 	initial_cursor_state = curs_set (0); /* Hide cursor.  */
+199:
+200: 	if (has_colors ())
+201: 	  {
+202: 		start_color ();
+203: 		init_pair (1, COLOR_RED, COLOR_BLACK);
+204: 	  }
+205: #else
+206: 	struct termios settings;
+207:
+208: 	if (init_term (STDIN_FILENO, &settings) == 0)
+209: 	  exit (EXIT_FAILURE);
+210: #endif
+211:
+212: 	current_buffer = new Buffer (file_name);
+213: 	if (current_buffer)
+214: 	  buffers = new Cons ((void*) current_buffer, NULL);
+215: 	else
+216: 	  buffers = NULL;  /* FIX should come by default */
+217:
+218: 	display_loop ();
+219:
+220: #if NCURSES
+221: 	curs_set (initial_cursor_state); /* Restore cursor.  */
+222: 	endwin ();
+223: #else
+224: 	cout << endl;
+225: 	if (revert_term (STDIN_FILENO, &settings) == 0)
+226: 	  exit (EXIT_FAILURE);
+227: #endif
+228:
+229: 	exit (EXIT_SUCCESS);
+230:
+231: 	return EXIT_SUCCESS;
+232:   }
+233:
+234:   int run () { return run (NULL); }
+235:
+236:   int init_term (int desc, struct termios *settings)
+237:   {
+238: 	struct termios originals;
+239:
+240: 	if (tcgetattr (desc, settings) < 0)
+241: 	  {
+242: 		perror (NULL);
+243: 		return 0;
+244: 	  }
+245:
+246: 	originals = *settings;
+247: 	settings->c_lflag &= ~(ICANON|ECHO|ISIG);
+248: 	settings->c_iflag &= ~(IGNBRK|BRKINT|PARMRK|ISTRIP|IXON);
+249: 	//cfmakeraw (settings);
+250:
+251: 	/*
+252:      It does exactly this:
+253:             TERMIOS-P->c_iflag &= ~(IGNBRK|BRKINT|PARMRK|ISTRIP
+254:                                           |INLCR|IGNCR|ICRNL|IXON);
+255:             TERMIOS-P->c_oflag &= ~OPOST;
+256:             TERMIOS-P->c_lflag &= ~(ECHO|ECHONL|ICANON|ISIG|IEXTEN);
+257:             TERMIOS-P->c_cflag &= ~(CSIZE|PARENB);
+258:             TERMIOS-P->c_cflag |= CS8;
+259: 	*/
+260:
+261: 	settings->c_cc[VMIN] = 1;
+262: 	settings->c_cc[VTIME] = 0;
+263:
+264: 	/* FIX TCSAFLUSH? */
+265: 	if (tcsetattr (desc, TCSANOW, settings) < 0)
+266: 	  {
+267: 		perror (NULL);
+268: 		return 0;
+269: 	  }
+270:
+271: 	*settings = originals;
+272:
+273: 	return 1;
+274:   }
+275:
+276:   int revert_term (int desc, struct termios *settings)
+277:   {
+278: 	if (tcsetattr (desc, TCSANOW, settings) < 0)
+279: 	  {
+280: 		perror (NULL);
+281: 		return 0;
+282: 	  }
+283:
+284: 	return 1;
+285:   }
+286: };
+287:
+288: #endif /* not _Editor_h */
+289:
