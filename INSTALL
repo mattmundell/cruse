@@ -4,8 +4,7 @@ BUILDING AND INSTALLING CRUSE
 0) Requirements
 
    Libncurses (or perhaps some other Curses library), Python and SWIG
-   are required.  The development machine is running ncurses 5.0,
-   Python 2.3.4, SWIG 1.3.22 and GCC version 3.4.2 (Debian 3.4.2-2).
+   are required.
 
    The CERN libraries are required if the CERN demo is enabled.  In
    Debian these are libkernlib, libmathlib and libgraflib.  The
@@ -27,14 +26,13 @@ BUILDING AND INSTALLING CRUSE
    or PPL directives are present then the CERN, MP expression
    evaluation and PPL additions will be included, respectively.
 
-2) Running `make' builds the program.  Warnings are likely, mostly
-   from SWIG.
+2) Running `make' builds the program.  Warnings are likely.
 
 3) The src directory will contain the executable `cruse', and can be
    included on the system path as installation.
 
-   Simple examples: src/cruse python/small_eg.py
+   Try this for simple examples: src/cruse python/small_eg.py
 
-   Example of extending with Python: src/cruse python/editing.py
+   Try this to see extending with Python: src/cruse python/editing.py
 
 4) `make clean' cleans the entire tree, including the executable.
